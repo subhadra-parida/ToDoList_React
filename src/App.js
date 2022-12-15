@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React,{ useState } from 'react';
+import './index.css'
+function Todo(){
+const [todo,setTodo]=useState("")
+const [alltodo,setAllTodo]=useState([])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <body>
+      <h1 id='header'>TODO LIST</h1>
+    <div id='container'>
+      <input id='inputbox' type="text" placeholder='Enter Your Task' onChange={(element)=>{
+        setTodo(element.target.value)
+      }}/>
+    <button id='addBtn' onClick={()=>{
+      if(todo.length>0){
+      setAllTodo([...alltodo,todo])
+      }
+    }}>Add ToDo </button>
+    {
+      alltodo.map((item,index)=>{
+        return(
+          <div>
+            <h2 id="item">{item}</h2>
+            <button id='deleteBtn' onClick={()=>{
+              let allData=[...alltodo]
+              allData.splice(index,1); 
+              setAllTodo(allData)
+            }}>Delete</button>  
+            <button id='editBtn' onClick={()=>{
+              let newArr=[...alltodo];
+              let editvalue = prompt("enter the edited todo")
+              newArr[index]=editvalue
+              setAllTodo(newArr)
+            }}>EDIT</button>
+            <button id='completeBtn' onClick={()=>{
+              let newArr = [...alltodo];
+              newArr[index]=<strike>{newArr[index]}</strike>
+              setAllTodo(newArr)    
+            }}>Complete</button>
+          </div>
+        )
+      })
+    }
     </div>
-  );
+    </body>
+  )
 }
+export default Todo
 
-export default App;

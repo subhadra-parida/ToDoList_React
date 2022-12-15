@@ -1,38 +1,58 @@
-.App {
+#container{
+  height: 600px;
+  width: 550px;
+  border: 4px solid black;
+  margin: auto;
+  background-color: green, white, red;
+}
+#header{
   text-align: center;
+  color: blue;
 }
+#inputbox{
+  height: 4vh;
+  margin-top: 10px;
+  margin-left: 160px;
+  color: black;
+  text-align: center;
+  background-color: crimson;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#addBtn{
+  height: 4vh;
+  margin: auto;
+  margin-left: 10px;
+  background-color: blue;
+  border: 2px solid black;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#item{
+  height: 5vh;
+  width: 300px;
+  margin-left: 150px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  border: 2px solid black;
 }
+#deleteBtn{
+  color: red;
+  margin-left: 190px;
+  font-size: large;
+  background-color: black;
+  border: 1px solid red;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+#editBtn{
+  color: blue;
+  font-size: large;
+  background-color: black;
+  border: 1px solid blue;
+}
+#completeBtn{
+  color: green;
+  font-size: large;
+  background-color: black;
+  border: 1px solid green;
+} 
+

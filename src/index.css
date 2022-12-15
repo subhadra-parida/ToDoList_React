@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#container{
+  height: 600px;
+  width: 550px;
+  border: 4px solid black;
+  margin: auto;
+  background-color: green, white, red;
 }
+#header{
+  text-align: center;
+  color: blue;
+}
+#inputbox{
+  height: 4vh;
+  margin-top: 10px;
+  margin-left: 160px;
+  color: black;
+  text-align: center;
+  background-color: crimson;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
+#addBtn{
+  height: 4vh;
+  margin: auto;
+  margin-left: 10px;
+  background-color: blue;
+  border: 2px solid black;
+  color: white;
+}
+#item{
+  height: 5vh;
+  width: 300px;
+  margin-left: 150px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  border: 2px solid black;
+}
+#deleteBtn{
+  color: red;
+  margin-left: 190px;
+  font-size: large;
+  background-color: black;
+  border: 1px solid red;
+
+}
+#editBtn{
+  color: blue;
+  font-size: large;
+  background-color: black;
+  border: 1px solid blue;
+}
+#completeBtn{
+  color: green;
+  font-size: large;
+  background-color: black;
+  border: 1px solid green;
+} 
+
